@@ -6,12 +6,13 @@ import { useState } from 'react';
 
 function App() {
   const [tasklist,setTasklist] = useState([])
+  const [task,setTask] = useState({})
 
   return (
     <div className="App">
       <Header />
-      <Addtask newbie={tasklist} old={setTasklist} />
-      <Showtask newbie={tasklist} old={setTasklist}/>
+      <Addtask tasklist={tasklist} setTasklist={setTasklist} task={task} setTask={setTask} />
+      <Showtask tasklist={tasklist} setTasklist={setTasklist} task={task} setTask={setTask} />
     </div>
   );
 }
