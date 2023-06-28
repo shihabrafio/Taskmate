@@ -9,11 +9,16 @@ export const Addtask = ({tasklist, setTasklist, task, setTask}) => {
         todo.id === task.id ? {id: task.id, name: task.name, time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`} : todo 
       ))
       setTasklist(UpdateTask)
+      setTask({ name: '' });
+      task.name = "";
     }else {
       const date = new Date();
       const newTask = {id: date.getTime(), name: e.target.task.value, time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`}
-      setTasklist([...tasklist, newTask])
-      e.target.task.value = "";
+      if(newTask.name){
+        setTasklist([...tasklist, newTask])
+        setTask({ name: '' });
+        e.target.task.value = "";
+      }
     }
   }
   return (
