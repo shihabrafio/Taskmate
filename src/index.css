@@ -142,13 +142,15 @@ header .themeSelector .activeTheme{
   background-color: #FFFFFF;
   margin: 20px auto;
   box-shadow: var(--box-shadow);
+  width: 90rem;
+
 }
 
-.showTask p.head{
+.showTask .head{
   padding: 10px 0px 20px 0px;
   border-bottom: 1px solid #dfdfdf;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .showTask p.head span:first-child{
