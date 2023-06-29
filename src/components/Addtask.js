@@ -14,7 +14,7 @@ export const Addtask = ({tasklist, setTasklist, task, setTask}) => {
     }else {
       const date = new Date();
       const newTask = {id: date.getTime(), name: e.target.task.value, time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`}
-      if(newTask.name){
+      if(newTask.name.trim()!==""){
         setTasklist([...tasklist, newTask])
         e.target.task.value = "";
         setTask({});
