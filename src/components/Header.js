@@ -24,6 +24,7 @@ export const Header = () => {
             <span onClick={()=>setTheme("gradientOne")} className={theme === 'gradientOne' ? "gradientOne activeTheme" : "gradientOne"}></span>
             <span onClick={()=>setTheme("gradientTwo")} className={theme === 'gradientTwo' ? "gradientTwo activeTheme" : "gradientTwo"}></span>
             <span onClick={()=>setTheme("gradientThree")} className={theme === 'gradientThree' ? "gradientThree activeTheme" : "gradientThree"}></span>
+            <span onClick={()=>setTheme("gradientFour")} className={theme === 'gradientFour' ? "gradientFour activeTheme" : "gradientFour"}></span>
         </div>
     </header>
   )
