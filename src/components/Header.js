@@ -2,11 +2,15 @@ import React, { useEffect, useState } from 'react'
 import Logo from '../assets/logo.png'
 
 export const Header = () => {
-  const[theme,setTheme] = useState('dark')
+  const[theme,setTheme] = useState(JSON.parse(localStorage.getItem("theme")) || 'dark')
   useEffect(()=>{
     document.documentElement.removeAttribute("class")
     document.documentElement.classList.add(theme)
   },[theme])
+  useEffect(()=>{
+    localStorage.setItem("theme",JSON.stringify(theme))
+  },[theme])
+
   return (
     <header>
         <div className='logo'>
