@@ -34,7 +34,7 @@
 
 # 📖 TaskMate <a name="about-project"></a>
 
-**TaskMate** is a corporation that offers services for commercial and scientific space flight has a web application called Space-Travelers-Hub. Users of the app will be able to reserve rockets and sign up for particular space missions.
+**TaskMate** is a user-friendly React app that simplifies task management and enhances productivity. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
